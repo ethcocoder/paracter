@@ -30,11 +30,11 @@
 
 ## Phase 2 — Camera
 
-- [ ] Implement generic `CameraSource`.
-- [ ] Add webcam source.
-- [ ] Measure FPS.
-- [ ] Measure frame latency.
-- [ ] Add camera reconnect behavior.
+- [x] Implement generic `CameraSource`.
+- [x] Add webcam source.
+- [x] Measure FPS.
+- [x] Measure frame latency.
+- [x] Add camera reconnect behavior.
 
 ## Phase 3 — Phone Camera
 

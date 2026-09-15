@@ -5,16 +5,18 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "projected-ai-interface"
 version = "0.1.0"
-description = "Phase 1 projected UI prototype"
+description = "Phase 1 projected UI and Phase 2 camera prototype"
 requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
 display = ["screeninfo>=0.8.1"]
+camera = ["opencv-python>=4.8"]
 test = ["pytest>=7.0"]
 
 [project.scripts]
 projected-ui = "projected_ai_interface.cli:main"
+projected-camera = "projected_ai_interface.camera_cli:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

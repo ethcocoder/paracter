@@ -285,6 +285,10 @@ PYTHONPATH=src python3 -m projected_ai_interface.cli
 
 Use `--display N` to select a detected display. When no display-detection library or graphical display is available, `--dry-run` uses a configurable fallback size (`--width` and `--height`) and prints the complete UI model as JSON. Press **Escape** to close the fullscreen UI.
 
+## Phase 2 Camera Prototype
+
+Phase 2 adds a transport-neutral `CameraSource` interface, an OpenCV webcam source, capture metrics, bounded reconnect support, and a deterministic synthetic source for testing without a camera. Install webcam support with `python3 -m pip install -e '.[camera]'`, then run `projected-camera --device 0 --frames 30`. For a headless smoke test, run `projected-camera --synthetic --frames 30`.
+
 ## Team
 
 **Ethco Coder & Natnael Ermiyas**
