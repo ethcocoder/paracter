@@ -21,12 +21,12 @@
 
 ## Phase 1 — Projector
 
-- [ ] Detect projector/secondary display.
-- [ ] Create fullscreen projected window.
-- [ ] Render test grid.
-- [ ] Render projected folder icons.
-- [ ] Add hover/highlight state.
-- [ ] Add visual touch feedback.
+- [x] Detect projector/secondary display.
+- [x] Create fullscreen projected window.
+- [x] Render test grid.
+- [x] Render projected folder icons.
+- [x] Add hover/highlight state.
+- [x] Add visual touch feedback.
 
 ## Phase 2 — Camera
 

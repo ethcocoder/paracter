@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projected-ai-interface"
+version = "0.1.0"
+description = "Phase 1 projected UI prototype"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+display = ["screeninfo>=0.8.1"]
+test = ["pytest>=7.0"]
+
+[project.scripts]
+projected-ui = "projected_ai_interface.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

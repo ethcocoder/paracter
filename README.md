@@ -272,6 +272,19 @@ Windows
 
 **V1 objective:** A working projected folder interaction controlled by a hand, with the phone eventually serving as the camera sensor and a small local LLM providing optional agent/tool intelligence.
 
+## Phase 1 Prototype
+
+The first implementation milestone is available in `src/projected_ai_interface`. It provides a borderless Tk projected UI with a logical 4×3 test grid, responsive folder targets, hover highlighting, click/touch feedback, display selection, and a headless dry-run mode for machines without a projector or graphical session.
+
+```bash
+python3 -m pip install -e '.[test]'
+python3 -m pytest -q
+PYTHONPATH=src python3 -m projected_ai_interface.cli --dry-run
+PYTHONPATH=src python3 -m projected_ai_interface.cli
+```
+
+Use `--display N` to select a detected display. When no display-detection library or graphical display is available, `--dry-run` uses a configurable fallback size (`--width` and `--height`) and prints the complete UI model as JSON. Press **Escape** to close the fullscreen UI.
+
 ## Team
 
 **Ethco Coder & Natnael Ermiyas**
