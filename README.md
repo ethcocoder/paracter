@@ -289,6 +289,21 @@ Use `--display N` to select a detected display. When no display-detection librar
 
 Phase 2 adds a transport-neutral `CameraSource` interface, an OpenCV webcam source, capture metrics, bounded reconnect support, and a deterministic synthetic source for testing without a camera. Install webcam support with `python3 -m pip install -e '.[camera]'`, then run `projected-camera --device 0 --frames 30`. For a headless smoke test, run `projected-camera --synthetic --frames 30`.
 
+## Phase 3 Android Camera Client
+
+The Android-first camera client lives in `mobile-camera/`. It is written with React Native primitives rendered through React Native Web so the same UI can be exercised in a browser first, then bundled into a Capacitor Android WebView. It requests camera permission, previews the camera, connects to a manually entered local WebSocket endpoint, and sends binary JPEG frames with selectable capture rates.
+
+```bash
+cd mobile-camera
+npm install
+npm run build                 # browser/WebView production validation
+npm run dev                   # browser-first camera test
+npx cap sync android          # copy the validated web bundle
+cd android && ./gradlew assembleDebug
+```
+
+The Capacitor project targets Android SDK 35 and includes the camera and Internet permissions. APK compilation requires a full JDK with `javac`, Android SDK platform/build tools, and `ANDROID_HOME` or `ANDROID_SDK_ROOT`; see [`mobile-camera/PROTOCOL.md`](mobile-camera/PROTOCOL.md) for the frame protocol and build prerequisites.
+
 ## Team
 
 **Ethco Coder & Natnael Ermiyas**

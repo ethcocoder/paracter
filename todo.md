@@ -38,12 +38,12 @@
 
 ## Phase 3 — Phone Camera
 
-- [ ] Choose Android/iOS first target.
-- [ ] Create minimal camera-streaming app.
-- [ ] Implement local-network discovery or manual IP connection.
-- [ ] Stream frames to desktop.
-- [ ] Add compression/resolution controls.
-- [ ] Add connection monitoring.
+- [x] Choose Android first target.
+- [x] Create minimal React Native Web + Capacitor camera-streaming app.
+- [x] Implement manual desktop WebSocket endpoint connection.
+- [x] Stream JPEG frames to desktop.
+- [x] Add compression/resolution controls.
+- [x] Add connection monitoring.
 - [ ] Test Wi-Fi latency.
 - [ ] Investigate USB transport.
 - [ ] Add USB mode if practical.
